@@ -1,4 +1,6 @@
-public class Candy {
+import java.lang.Math;
+
+public class Candy extends DessertItem {
 
     private double weight;
     private double price;
@@ -13,10 +15,13 @@ public class Candy {
     }
 
     public double getWeight () {
-        return this.weight;
+        return weight;
     }
 
-    public double cost () {
-        return
+    public double getCost () {
+
+        price = Math.round(weight * 0.89);
+
+        return price;
     }
 }
