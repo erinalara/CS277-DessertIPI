@@ -1,6 +1,8 @@
-import java.lang.Math;
+import java.text.DecimalFormat;
 
 public class Candy extends DessertItem {
+
+    DecimalFormat df = new DecimalFormat("0.00");
 
     private double weight;
     private double price;
@@ -22,11 +24,47 @@ public class Candy extends DessertItem {
         cal = c;
     }
 
+    public boolean setName (String x){
+
+        if (x != ""){
+
+            name = x;
+
+            return true;
+        }
+
+        return false;
+    }
+
     public boolean setWeight (double lbs) {
 
         if (lbs != 0.0){
 
             weight = lbs;
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean setRate (double r){
+
+        if (r != 0.0){
+
+            rate = 0.0;
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean setCal (int c){
+
+        if (c != 0.0){
+
+            cal = c;
 
             return true;
         }
@@ -41,7 +79,7 @@ public class Candy extends DessertItem {
 
     public double getCost () {
 
-        price = Math.round((weight * rate) * 100.0) / 100.0;
+        price = ((weight * rate) * 100.0) / 100.0;
 
         return price;
     }
@@ -59,6 +97,6 @@ public class Candy extends DessertItem {
     @Override
     public String toString(){
 
-        return weight + " @ " + rate + " lb \n" + name + "(Candy) \t" + getCost();
+        return weight + " @ " + rate + " lb \n" + name + "(Candy) \t" + df.format(getCost());
     }
 }

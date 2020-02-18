@@ -1,11 +1,19 @@
+import java.text.DecimalFormat;
+
 public class Cookie extends DessertItem {
 
     private int amount;
     private double price; // price per dozen
+    private double rate;
     private int cal;
 
     public Cookie(String n){
         super(n);
+
+        amount = 0;
+        price = 0.0;
+        rate = 0.0;
+        cal = 0;
     }
 
     public Cookie(String n, int a){
