@@ -11,6 +11,10 @@ public class Candy extends DessertItem {
 
     public Candy(String n) {
         super(n);
+        weight = 0.0;
+        price = 0.0;
+        rate = 0.0;
+        cal = 0;
     }
 
     public Candy(String n, double w, double r, int c){
@@ -97,6 +101,7 @@ public class Candy extends DessertItem {
     @Override
     public String toString(){
 
-        return weight + " @ " + rate + " lb \n" + name + "(Candy) \t" + df.format(getCost());
+        return weight + " @ " + rate + " /lb \n" + name + "(Candy) \t \t \t" + df.format(getCost()) + "\n" + name +
+                "(Candy) calories: " + cal;
     }
 }
