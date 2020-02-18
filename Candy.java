@@ -4,49 +4,61 @@ public class Candy extends DessertItem {
 
     private double weight;
     private double price;
+    private double rate;
     private int cal;
 
     public Candy(String n) {
         super(n);
     }
 
-    public Candy(String n, double w){
+    public Candy(String n, double w, double r, int c){
 
         super(n);
 
         weight = w;
+
+        rate = r;
+
+        cal = c;
     }
 
-    public void setWeight (double lbs) {
-        weight = lbs;
+    public boolean setWeight (double lbs) {
+
+        if (lbs != 0.0){
+
+            weight = lbs;
+
+            return true;
+        }
+
+        return false;
     }
 
     public double getWeight () {
+
         return weight;
     }
 
     public double getCost () {
 
-        final double cornRate = 7.25;
-
-        final double lolipopRate = 8.25;
-
-        if ((name.equals("Corn"))) {
-
-            price = Math.round((weight * cornRate) * 100.0) / 100.0;
-        }
-
-        else if ((name.equals("Lolipop"))){
-
-            price = Math.round((weight * lolipopRate) * 100.0) / 100.0;
-        }
+        price = Math.round((weight * rate) * 100.0) / 100.0;
 
         return price;
+    }
+
+    public double getRate(){
+
+        return rate;
+    }
+
+    public double getCal(){
+
+        return cal;
     }
 
     @Override
     public String toString(){
 
-        return weight + " @ something lb \n" + name + "(Candy) \t" + getCost();
+        return weight + " @ " + rate + " lb \n" + name + "(Candy) \t" + getCost();
     }
 }
