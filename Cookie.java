@@ -4,13 +4,17 @@ public class Cookie extends DessertItem {
     private double per; // price per dozen
     private int cal;
 
-    public Cookie(){
+    public Cookie(String n){
 
-        super();
+        super(n);
     }
 
     public double getCost(){
 
-        per = Math.round(amount(399/12));
+        //per = Math.round(amount(399/12));
+
+        return 0.0;
     }
+
+
 }

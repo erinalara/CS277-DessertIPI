@@ -6,6 +6,10 @@ public class Tester {
 
         ArrayList<DessertItem> desserts = new ArrayList<>();
 
-        desserts.add(new Candy())
+        desserts.add(new Candy("Corn", 1.5));
+
+        DessertItem tester = desserts.get(0);
+
+        System.out.println(tester);
     }
 }
