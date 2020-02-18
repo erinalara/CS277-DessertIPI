@@ -2,15 +2,34 @@ public class Cookie extends DessertItem {
 
     private int amount;
     private double price; // price per dozen
+    private double rate;
     private int cal;
 
     public Cookie(String n){
         super(n);
     }
 
-    public Cookie(String n, int a){
+    public Cookie(String n, int w, double r, int c){
+
         super(n);
-        amount = a;
+
+        amount = w;
+
+        rate = r;
+
+        cal = c;
+    }
+
+    public boolean setAmount (int a) {
+        if (a != 0){
+            amount = a;
+            return true;
+        }
+        return false;
+    }
+
+    public double getAmount () {
+        return amount;
     }
 
     public void setCal(int c) {
@@ -19,6 +38,10 @@ public class Cookie extends DessertItem {
 
     public int getCal() {
         return cal;
+    }
+
+    public double getRate(){
+        return rate;
     }
 
     public double getCost(){
@@ -35,6 +58,12 @@ public class Cookie extends DessertItem {
         }
 
         return price;
+    }
+
+    @Override
+    public String toString(){
+
+        return amount + " @ something lb \n" + name + "(Cookie) \t" + getCost();
     }
 
 
