@@ -37,7 +37,7 @@ public class Checkout {
     @Override
     public String toString() {
         String receipt = "";
-        receipt += "    EE! Desserts of Disneyland!     " + '\n' + "    ___________________________     " + '\n';
+        receipt += "    EE! Desserts of Disneyland!     " + '\n' + "    - - - - - - - - - - - - - -      " + '\n';
         for (int i = 0; i < bag.size(); i++) {
             DessertItem tester = bag.get(i);
             receipt += tester;

@@ -98,6 +98,6 @@ public class Candy extends DessertItem {
     @Override
     public String toString(){
 
-        return weight + " @ " + rate + " lb \n" + name + "(Candy) \t" + df.format(getCost());
+        return weight + " @ " + rate + " lb \n" + name + "(Candy)\t\t\t\t\t\t\t\t" + df.format(getCost());
     }
 }
