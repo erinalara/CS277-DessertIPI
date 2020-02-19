@@ -28,7 +28,7 @@ public class Sundae extends IceCream {
     @Override
     public String toString(){
 
-        return price + "\n" + name + "(Sundae) \t" + getCost();
+        return name + "(Sundae) \t" + getCost();
     }
 
 }
