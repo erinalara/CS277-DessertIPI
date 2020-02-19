@@ -1,6 +1,7 @@
 import java.text.DecimalFormat;
 
 public class Cookie extends DessertItem {
+    DecimalFormat df = new DecimalFormat("0.00");
 
     private int amount;
     private double price; // price per dozen
@@ -52,23 +53,15 @@ public class Cookie extends DessertItem {
 
     public double getCost(){
 
-        final double chocoRate = 499 / 12;
-        final double oatRate = 399 / 12;
+        price = (amount * rate / 12.0);
 
-        if ((name.equals("Chocolate Chip"))) {
-            price = Math.round(amount*(chocoRate));
-        }
-
-        else if ((name.equals("Oatmeal"))){
-            price = Math.round(amount*(oatRate));
-        }
         return price;
     }
 
     @Override
     public String toString(){
 
-        return amount + " @ something lb \n" + name + "(Cookie) \t" + getCost();
+        return amount + " @ " + rate + " /dz \n" + name + "(Cookie) \t" + df.format(getCost());
     }
 
 
