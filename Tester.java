@@ -18,6 +18,7 @@ public class Tester {
         for (int i = 0; i < desserts.size(); i++) {
             DessertItem tester = desserts.get(i);
             System.out.println(tester);
+            System.out.println();
         }
     }
 }
