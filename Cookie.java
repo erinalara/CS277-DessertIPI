@@ -9,7 +9,6 @@ public class Cookie extends DessertItem {
 
     public Cookie(String n){
         super(n);
-
         amount = 0;
         price = 0.0;
         rate = 0.0;
@@ -63,7 +62,6 @@ public class Cookie extends DessertItem {
         else if ((name.equals("Oatmeal"))){
             price = Math.round(amount*(oatRate));
         }
-
         return price;
     }
 
