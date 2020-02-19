@@ -1,4 +1,6 @@
-public abstract class DessertItem {
+import java.lang.Comparable;
+
+public abstract class DessertItem implements Comparable {
 
     protected String name;
 
@@ -32,5 +34,12 @@ public abstract class DessertItem {
      */
     public abstract double getCost();
 
-
+    public static DessertItem max (DessertItem a, DessertItem b) {
+        if (b.compareTo(a) > a.compareTo(b)) {
+            return b;
+        }
+        else {
+            return a;
+        }
+    }
 }
