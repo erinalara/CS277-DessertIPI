@@ -1,26 +1,25 @@
+import java.text.DecimalFormat;
+
 public class Sundae extends IceCream {
+    DecimalFormat df = new DecimalFormat("0.00");
 
     private double price; // cost of ice cream + topping
+    private double top;
     private int cal;
 
     public Sundae(String n) {
         super(n);
     }
 
+    public Sundae(String n, double t, int c) {
+        super(n);
+        top = t;
+        cal = c;
+    }
+
     public double getCost(){
 
-        price = super.getCost();
-
-        final double carm = 11.99;
-        final double straw = 9.00;
-
-        if ((name.equals("Caramel"))) {
-            price += carm;
-        }
-
-        else if ((name.equals("Strawberry"))){
-            price += straw;
-        }
+        price = super.getCost() + top;
 
         return price;
     }
@@ -28,7 +27,7 @@ public class Sundae extends IceCream {
     @Override
     public String toString(){
 
-        return name + "(Sundae) \t" + getCost();
+        return name + "(Sundae) \t" + df.format(getCost());
     }
 
 }

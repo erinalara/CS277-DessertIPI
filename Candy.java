@@ -80,7 +80,7 @@ public class Candy extends DessertItem {
 
     public double getCost () {
 
-        price = ((weight * rate) * 100.0) / 100.0;
+        price = (weight * rate);
 
         return price;
     }

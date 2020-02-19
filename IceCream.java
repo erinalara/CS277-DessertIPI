@@ -1,4 +1,7 @@
+import java.text.DecimalFormat;
+
 public class IceCream extends DessertItem{
+    DecimalFormat df = new DecimalFormat("0.00");
 
     private double price;
     private int cal;
@@ -9,32 +12,19 @@ public class IceCream extends DessertItem{
         cal = 0;
     }
 
-    public IceCream(String n, int c){
-
+    public IceCream(String n, double p, int c){
         super(n);
-
+        price = p;
         cal = c;
     }
 
     public double getCost(){
-
-        final double choco = 9.99;
-        final double van = 7.00;
-
-        if ((name.equals("Chocolate"))) {
-            price = choco;
-        }
-
-        else if ((name.equals("Vanilla"))){
-            price = van;
-        }
-
         return price;
     }
 
     @Override
     public String toString(){
 
-        return name + "(Ice Cream) \t" + getCost();
+        return name + "(Ice Cream) \t" + df.format(getCost());
     }
 }
