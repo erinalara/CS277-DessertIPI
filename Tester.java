@@ -7,7 +7,6 @@ public class Tester {
         ArrayList<DessertItem> desserts = new ArrayList<>();
         Checkout cart = new Checkout();
 
-
         cart.enterItem(new Candy("Corn", 1.5, 7.25, 500));
         cart.enterItem(new Candy("Lollipop", 2.5, 8.25, 640 ));
         cart.enterItem(new Cookie("Chocolate Chip", 17, 4.99, 250));
@@ -18,8 +17,11 @@ public class Tester {
         cart.enterItem(new Sundae("Strawberry", 6.90, 560));
 
         System.out.println("Number of items: " + cart.numberofItems());
+        System.out.println("Total cost: " + cart.totalCost());
+        System.out.println("Total tax: " + cart.totalTax());
+        System.out.println("Cost + Tax: " + (cart.totalTax() + cart.totalCost()));
+        System.out.println();
         System.out.println(cart.toString());
-
 
     }
 }
