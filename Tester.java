@@ -17,14 +17,9 @@ public class Tester {
         cart.enterItem(new Sundae("Caramel", 7.70, 600));
         cart.enterItem(new Sundae("Strawberry", 6.90, 560));
 
-        System.out.println(cart.numberofItems());
+        System.out.println("Number of items: " + cart.numberofItems());
         System.out.println(cart.toString());
 
-        /*for (int i = 0; i < desserts.size(); i++) {
-            DessertItem tester = desserts.get(i);
-            System.out.println(tester);
-            System.out.println();
-        }*/
 
     }
 }

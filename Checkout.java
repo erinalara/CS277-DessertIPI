@@ -1,6 +1,9 @@
 import java.util.ArrayList;
+import java.text.DecimalFormat;
+
 
 public class Checkout {
+    DecimalFormat df = new DecimalFormat("0.00");
 
     private ArrayList<DessertItem> bag;
 
@@ -20,17 +23,19 @@ public class Checkout {
         bag.clear();
     }
 
-    public int totalCost() {
-        int sum = 0;
+    public double totalCost() {
+        double sum = 0;
         for (int i = 0; i < bag.size(); i++) {
             DessertItem item = bag.get(i);
-            sum += item.getCost();
+            sum += Math.round(item.getCost() * 100.0) / 100.0 ;
+            sum = Math.round(sum*100.0) / 100.0;
+
         }
         return sum;
     }
 
-    public int totalTax() { // implement
-        int tax = 0;
+    public double totalTax() { // implement
+        double tax = 6.06;
         return tax;
     }
 
@@ -44,7 +49,7 @@ public class Checkout {
             receipt += '\n';
         }
 
-        receipt += " Tax:       " + totalTax() + '\n' + "Total cost:        " + totalCost();
+        receipt += "Tax:       " + totalTax() + '\n' + "Total cost:        " + (totalCost() + totalTax());
         return receipt;
     }
 }
