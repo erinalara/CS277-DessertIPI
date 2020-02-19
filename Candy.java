@@ -1,5 +1,4 @@
-/** 
-**/
+
 import java.text.DecimalFormat;
 
 public class Candy extends DessertItem {
