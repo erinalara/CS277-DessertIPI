@@ -56,23 +56,6 @@ public class IceCream extends DessertItem{
         return 0;
     }
 
-    public IceCream getMax(Object o){
-
-        if (o instanceof IceCream){
-
-            IceCream f = (IceCream) o;
-
-            if (this.compareTo(f) > 0){
-
-                return this;
-            }
-            else{
-                return f;
-            }
-        }
-
-        return this;
-    }
     /** Returns a string of the ice cream's name and cost
      * @return ice cream's name and cost
      */

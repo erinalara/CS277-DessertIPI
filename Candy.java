@@ -150,27 +150,6 @@ public class Candy extends DessertItem{
         return 0;
     }
 
-    public Candy getMax(Object o){
-
-        if (o instanceof Candy){
-
-            Candy f = (Candy) o;
-
-            if (this.compareTo(f) > 0){
-
-                return this;
-            }
-
-            else {
-
-                return f;
-            }
-
-        }
-
-        return this;
-    }
-
 
     /** Returns a string of the candy's weight, rate, name, and cost
      * @return string of candy's weight, rate, name, and cost

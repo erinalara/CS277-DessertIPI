@@ -112,35 +112,13 @@ public class Cookie extends DessertItem {
         return 0;
     }
 
-    public Cookie getMax(Object o){
-
-        if (o instanceof Cookie){
-
-            Cookie f = (Cookie) o;
-
-            if (this.compareTo(f) > 0){
-
-                return this;
-            }
-
-            else {
-
-                return f;
-            }
-
-        }
-
-        return this;
-    }
 
     /** Returns a string of the cookie's amount, cost per dozen rate, name, and total cost
      * @return cookie amount, cost rate per dozen, name, and total cost
      */
     @Override
     public String toString(){
-
         return amount + " @ " + rate + " / lb \n" + String.format("%-40s%5.2f" , (name+" (Cookie)"), getCost());
     }
-
 
 }

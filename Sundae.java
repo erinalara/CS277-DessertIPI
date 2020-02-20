@@ -48,4 +48,35 @@ public class Sundae extends IceCream {
         return  String.format("%-40s%5.2f" , (name+" (Sundae)"), getCost());
     }
 
+    /** Sets number of calories for cookie
+     * @param c number of calories for cookie
+     * @return true if number of calories was successfully set, false if not
+     */
+    public boolean setCal(int c) {
+        if (c != 0){
+            cal = c;
+            return true;
+        }
+        return false;
+    }
+
+    /** Gets number of calories of cookie
+     * @return cookie's number of calories
+     */
+    public int getCal() {
+        return cal;
+    }
+
+    public int compareTo(Object o){
+
+        if (o instanceof Sundae){
+
+            Sundae f = (Sundae) o;
+
+            return this.getCal() - f.getCal();
+        }
+
+        return 0;
+    }
+
 }

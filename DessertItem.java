@@ -33,7 +33,7 @@ public abstract class DessertItem implements Comparable {
         return name;
     }
 
-    static DessertItem max (DessertItem a, DessertItem b) {
+    public static DessertItem max(DessertItem a, DessertItem b) {
         if (b.compareTo(a) > a.compareTo(b)) {
             return b;
         }
@@ -48,8 +48,6 @@ public abstract class DessertItem implements Comparable {
      * @return cost of DessertItem
      */
     public abstract double getCost();
-
-    abstract DessertItem getMax(Object o);
 
 }
 

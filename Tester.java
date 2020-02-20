@@ -32,9 +32,9 @@ public class Tester {
         System.out.println();
         System.out.println(cart.toString());
 
-        DessertItem max = (desserts.get(0).getMax(desserts.get(1)));
-
-        System.out.println(max);
+        //DessertItem max = (desserts.get(0).max(desserts.get(1)));
+        DessertItem m = DessertItem.max(desserts.get(0),desserts.get(1));
+        System.out.println(m.getName() + "has");
 
     }
 }
