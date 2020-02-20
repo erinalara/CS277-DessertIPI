@@ -1,7 +1,7 @@
 /** @authors Eric Truong, Erina Lara
  * Date: February 18, 2020
- * Description: Subclass creates a Candy child Object that extends the DessertItem super class.
- * The Candy child has a weight, price, rate, and number of calories.
+ * Purpose: Program creates a list of dessert items of Candy, Cookie, IceCream, and Sundae
+ * that extend its parent class, DessertItems.
  *
  */
 public class Candy extends DessertItem{
@@ -92,7 +92,6 @@ public class Candy extends DessertItem{
      * @return weight of candy
      */
     public double getWeight () {
-
         return weight;
     }
 
@@ -100,7 +99,7 @@ public class Candy extends DessertItem{
      * @return total cost of candy
      */
     public double getCost () {
-
+        // calculated by weight multiplied by rate
         price = (weight * rate);
         return price;
     }
@@ -131,7 +130,6 @@ public class Candy extends DessertItem{
         }
         return 0;
     }
-
 
     /** Returns a string of the candy's weight, rate, name, and cost
      * @return string of candy's weight, rate, name, and cost

@@ -1,9 +1,7 @@
 /** @authors Eric Truong, Erina Lara
  * Date: February 18, 2020
- * Description: Class that creates a Checkout Object that creates and manages a list of DessertItems.
- * A Checkout has a tax rate, and actions to clear the list of DessertItems, add to list, return the number
- * of items in the list, and gives a total cost for all items.
- *
+ * Purpose: Program creates a list of dessert items of Candy, Cookie, IceCream, and Sundae
+ * that extend its parent class, DessertItems.
  */
 
 import java.util.ArrayList;

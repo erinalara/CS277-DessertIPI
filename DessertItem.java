@@ -1,7 +1,7 @@
 /** @authors Eric Truong, Erina Lara
  * Date: February 18. 2020
- * Purpose: Create a list of dessert items of Candy, Cookie, IceCream, and Sundae
- * that extend its parent class, DessertItems. Program outputs a sample receipt, and tests each subclass.
+ * Purpose: Program creates a list of dessert items of Candy, Cookie, IceCream, and Sundae
+ * that extend its parent class, DessertItems.
  *
  */
 

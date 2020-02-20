@@ -1,8 +1,7 @@
 /** @authors Eric Truong, Erina Lara
  * Date: February 18, 2020
- * Description: Subclass creates a Sundae child object that extends its parent, IceCream class, which extends
- * from the DessertItem class. A Sundae child object has a total price, price for topping, and a number of calories.
- *
+ * Purpose: Program creates a list of dessert items of Candy, Cookie, IceCream, and Sundae
+ * that extend its parent class, DessertItems.
  */
 
 public class Sundae extends IceCream {

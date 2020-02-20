@@ -1,9 +1,16 @@
+/** @authors Eric Truong, Erina Lara
+ * Date: February 18, 2020
+ * Purpose: Program creates a list of dessert items of Candy, Cookie, IceCream, and Sundae
+ * that extend its parent class, DessertItems.
+ */
+
 import java.util.ArrayList;
 
 public class Tester {
 
     public static void main (String[] args) {
 
+        // Sample testing
         ArrayList<DessertItem> desserts = new ArrayList<>();
         ArrayList<DessertItem> desserts2 = new ArrayList<>();
 
@@ -92,19 +99,22 @@ public class Tester {
         // MAX WITH SAME OBJECTS
         System.out.println("MAX TEST WITH SAME TYPES: ");
 
+        // For loop compare like objects' number of calories
         for (int i = 0; i < desserts.size()-1; i++) {
             DessertItem m = DessertItem.max(desserts.get(i), desserts.get(i+1));
             DessertItem n;
             int xCal = 0;
             int yCal = 0;
 
+            // if max is first object
             if (m == desserts.get(i)) {
                 n = desserts.get(i+1);
             }
+            // if max is second object
             else {
                 n = desserts.get(i);
             }
-
+            // gets calories from objects
             if ((m instanceof Candy) || (n instanceof Candy)) {
                 Candy x = (Candy) m;
                 Candy y = (Candy) n;
@@ -129,6 +139,7 @@ public class Tester {
                 xCal = x.getCal();
                 yCal = y.getCal();
             }
+            // if the calories equal each other
             if (xCal == yCal) {
                 System.out.println(m.getName() + " with " +xCal + " calories is equal to "
                         + n.getName() + " that has " +yCal + " calories.");
@@ -142,6 +153,7 @@ public class Tester {
         System.out.println();
 
         // MAX WITH DIFF OBJECTS
+        // For loop coompares calories with different object types
         System.out.println("MAX TEST WITH DIFFERENT TYPES: ");
 
         for (int i = 0; i < desserts2.size()-1; i++) {
@@ -150,13 +162,15 @@ public class Tester {
             int xCal = 0;
             int yCal = 0;
 
+            // if max is the first object
             if (m == desserts2.get(i)) {
                 n = desserts2.get(i+1);
             }
+            // if max is second object
             else {
                 n = desserts2.get(i);
             }
-
+            // gets calories from first object compared
             if ((m instanceof Candy)) {
                 Candy x = (Candy) m;
                 xCal = x.getCal();
@@ -173,6 +187,8 @@ public class Tester {
                 Sundae x = (Sundae) m;
                 xCal = x.getCal();
             }
+            // gets calories from second object compared
+
             if ((n instanceof Candy)) {
                 Candy y = (Candy) n;
                 yCal = y.getCal();
@@ -189,6 +205,7 @@ public class Tester {
                 Sundae y = (Sundae) n;
                 yCal = y.getCal();
             }
+            // if objects' calories are equal
             if (xCal == yCal) {
                 System.out.println(m.getName() + " with " +xCal + " calories is equal to "
                         + n.getName() + " that has " +yCal + " calories.");
@@ -233,12 +250,14 @@ public class Tester {
             int checkHighest = 0;
             int checkLowest = 0;
             int lowest = i;
-
+            // minimum, set to first item of list, changes as i incrememnts
             DessertItem nLowest = desserts.get(i);
 
+            // compares second object with nLowest
             for (int j = i + 1; j < desserts.size(); j++){
                 DessertItem checking = desserts.get(j);
 
+                // retrieves calories of nLowest
                 if (nLowest instanceof Candy){
                     Candy a = (Candy) nLowest;
                     checkLowest = a.getCal();
@@ -259,6 +278,7 @@ public class Tester {
                     checkLowest = a.getCal();
                 }
 
+                // retrieves calories of object to be compared
                 if (checking instanceof Candy){
                     Candy a = (Candy) checking;
                     checkHighest = a.getCal();
@@ -279,11 +299,13 @@ public class Tester {
                     checkHighest = a.getCal();
                 }
 
+                // if next object's calories is smaller than current object's calories
                 if ((checkHighest < checkLowest)){
                     lowest = desserts.indexOf(checking);
                     nLowest = desserts.get(desserts.indexOf(checking));
                 }
             }
+            // swaps and sets lowest item
             DessertItem swap = desserts.get(i);
             desserts.set(i, desserts.get(lowest));
             desserts.set(lowest, swap);
