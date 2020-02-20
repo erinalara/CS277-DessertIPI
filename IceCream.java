@@ -36,6 +36,18 @@ public class IceCream extends DessertItem{
         cal = c;
     }
 
+    /** Sets number of calories for ice cream
+     * @param c number of calories for ice cream
+     * @return true if number of calories was successfully set, false if not
+     */
+    public boolean setCal(int c) {
+        if (c != 0){
+            cal = c;
+            return true;
+        }
+        return false;
+    }
+
     public int getCal(){
 
         return cal;

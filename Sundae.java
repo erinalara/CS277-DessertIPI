@@ -45,8 +45,8 @@ public class Sundae extends IceCream {
         return super.getCost() + top;
     }
 
-    /** Sets number of calories for cookie
-     * @param c number of calories for cookie
+    /** Sets number of calories for sundae
+     * @param c number of calories for sundae
      * @return true if number of calories was successfully set, false if not
      */
     public boolean setCal(int c) {
@@ -57,8 +57,8 @@ public class Sundae extends IceCream {
         return false;
     }
 
-    /** Gets number of calories of cookie
-     * @return cookie's number of calories
+    /** Gets number of calories of sundae
+     * @return sundae's number of sundae
      */
     public int getCal() {
         return cal;
