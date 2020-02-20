@@ -134,7 +134,6 @@ public class Candy extends DessertItem{
      */
     public int getCal(){
 
-
         return cal;
     }
 
