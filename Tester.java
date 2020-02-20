@@ -5,6 +5,8 @@ public class Tester {
     public static void main (String[] args) {
 
         ArrayList<DessertItem> desserts = new ArrayList<>();
+        ArrayList<DessertItem> desserts2 = new ArrayList<>();
+
         Checkout cart = new Checkout();
 
         desserts.add(new Candy("Corn", 1.5, 7.25, 500));
@@ -15,6 +17,15 @@ public class Tester {
         desserts.add(new IceCream("Chocolate", 9.99, 500));
         desserts.add(new Sundae("Caramel", "HotFudge", 7.70, 600));
         desserts.add(new Sundae("Banana Split", "Strawberries", 6.90, 560));
+
+        desserts2.add(new Candy("Lollipop", 2.5, 8.25, 640 ));
+        desserts2.add(new Cookie("Oatmeal", 15, 3.99, 240));
+        desserts2.add(new Sundae("Banana Split", "Strawberries", 6.90, 560));
+        desserts2.add(new IceCream("Chocolate", 9.99, 500));
+        desserts2.add(new Candy("Corn", 1.5, 7.25, 500));
+        desserts2.add(new IceCream("Vanilla", 10.05, 500));
+        desserts2.add(new Sundae("Caramel", "HotFudge", 7.70, 600));
+        desserts2.add(new Cookie("Chocolate Chip", 17, 4.99, 250));
 
         cart.enterItem(new Candy("Corn", 1.5, 7.25, 500));
         cart.enterItem(new Candy("Lollipop", 2.5, 8.25, 640 ));
@@ -68,6 +79,8 @@ public class Tester {
         System.out.println("------------------------------------------------------------------");
 
         // OUTPUT RECEIPT
+        System.out.println("OUTPUT RECEIPT: ");
+        System.out.println();
         System.out.println("Number of items: " + cart.numberofItems());
         System.out.println("Total cost: " + cart.totalCost());
         System.out.println("Total tax: " + cart.totalTax());
@@ -77,6 +90,8 @@ public class Tester {
         System.out.println();
 
         // MAX WITH SAME OBJECTS
+        System.out.println("MAX TEST WITH SAME TYPES: ");
+
         for (int i = 0; i < desserts.size()-1; i++) {
             DessertItem m = DessertItem.max(desserts.get(i), desserts.get(i+1));
             DessertItem n;
@@ -126,6 +141,94 @@ public class Tester {
         }
         System.out.println();
 
+        // MAX WITH DIFF OBJECTS
+        System.out.println("MAX TEST WITH DIFFERENT TYPES: ");
+
+        for (int i = 0; i < desserts2.size()-1; i++) {
+            DessertItem m = DessertItem.max(desserts2.get(i), desserts2.get(i+1));
+            DessertItem n;
+            int xCal = 0;
+            int yCal = 0;
+
+            if (m == desserts2.get(i)) {
+                n = desserts2.get(i+1);
+            }
+            else {
+                n = desserts2.get(i);
+            }
+
+            if ((m instanceof Candy)) {
+                Candy x = (Candy) m;
+                xCal = x.getCal();
+
+            } else if ((m instanceof Cookie)) {
+                Cookie x = (Cookie) m;
+                xCal = x.getCal();
+
+            } else if ((m instanceof IceCream)) {
+                IceCream x = (IceCream) m;
+                xCal = x.getCal();
+
+            } else if ((m instanceof Sundae)) {
+                Sundae x = (Sundae) m;
+                xCal = x.getCal();
+            }
+            if ((n instanceof Candy)) {
+                Candy y = (Candy) n;
+                yCal = y.getCal();
+
+            } else if ((n instanceof Cookie)) {
+                Cookie y = (Cookie) n;
+                yCal = y.getCal();
+
+            } else if ((n instanceof IceCream)) {
+                IceCream y = (IceCream) n;
+                yCal = y.getCal();
+
+            } else if ((n instanceof Sundae)) {
+                Sundae y = (Sundae) n;
+                yCal = y.getCal();
+            }
+            if (xCal == yCal) {
+                System.out.println(m.getName() + " with " +xCal + " calories is equal to "
+                        + n.getName() + " that has " +yCal + " calories.");
+            }
+            else {
+                System.out.println(m.getName() + " with " + xCal + " calories has more calories than "
+                        + n.getName() + " that has " + yCal + " calories.");
+            }
+            i++;
+        }
+        System.out.println();
+
+        // PRINTS UNSORTED LIST
+        System.out.println("UNSORTED LIST: ");
+
+        for (int i = 0; i < desserts.size(); i++){
+            DessertItem select = desserts.get(i);
+
+            if (select instanceof Candy){
+                Candy toPrint = (Candy) select;
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+
+            else if (select instanceof Cookie){
+                Cookie toPrint = (Cookie) select;
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+
+            else if (select instanceof IceCream){
+                IceCream toPrint = (IceCream) select;
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+
+            else if (select instanceof Sundae){
+                Sundae toPrint = (Sundae) select;
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+        }
+
+        // SORTED LIST
         for (int i = 0; i < desserts.size(); i++){
             int checkHighest = 0;
             int checkLowest = 0;
@@ -187,6 +290,8 @@ public class Tester {
         }
 
         // Prints sorted list
+        System.out.println();
+        System.out.println("SORTED LIST: ");
         for (int i = 0; i < desserts.size(); i++){
             DessertItem select = desserts.get(i);
 
