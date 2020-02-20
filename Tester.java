@@ -35,6 +35,9 @@ public class Tester {
         for (int i = 0; i < desserts.size()-1; i++) {
             DessertItem m = DessertItem.max(desserts.get(i), desserts.get(i+1));
             DessertItem n;
+            int xCal = 0;
+            int yCal = 0;
+
             if (m == desserts.get(i)) {
                 n = desserts.get(i+1);
             }
@@ -45,26 +48,35 @@ public class Tester {
             if ((m instanceof Candy) || (n instanceof Candy)) {
                 Candy x = (Candy) m;
                 Candy y = (Candy) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
-                    + n.getName() + " that has " + y.getCal() + " calories.");
+                xCal = x.getCal();
+                yCal = y.getCal();
 
             } else if ((m instanceof Cookie) || (n instanceof Cookie)) {
                 Cookie x = (Cookie) m;
                 Cookie y = (Cookie) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
-                        + n.getName() + " that has " + y.getCal() + " calories.");
+                xCal = x.getCal();
+                yCal = y.getCal();
 
             } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
                 IceCream x = (IceCream) m;
                 IceCream y = (IceCream) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
-                        + n.getName() + " that has " + y.getCal() + " calories.");
+                xCal = x.getCal();
+                yCal = y.getCal();
+
 
             } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
                 Sundae x = (Sundae) m;
                 Sundae y = (Sundae) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
-                        + n.getName() + " that has " + y.getCal() + " calories.");
+                xCal = x.getCal();
+                yCal = y.getCal();
+            }
+            if (xCal == yCal) {
+                System.out.println(m.getName() + " with " +xCal + " calories is equal to "
+                        + n.getName() + " that has " +yCal + " calories.");
+            }
+            else {
+                System.out.println(m.getName() + " with " + xCal + " calories has more calories than "
+                        + n.getName() + " that has " + yCal + " calories.");
             }
             i++;
 

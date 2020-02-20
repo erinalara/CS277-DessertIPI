@@ -150,7 +150,6 @@ public class Candy extends DessertItem{
 
             return this.getCal() - f.getCal();
         }
-
         return 0;
     }
 
