@@ -50,18 +50,23 @@ public class Tester {
 
             } else if ((m instanceof Cookie) || (n instanceof Cookie)) {
                 Cookie x = (Cookie) m;
-                Candy y = (Candy) n;
+                Cookie y = (Cookie) n;
+                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                        + n.getName() + " that has " + y.getCal() + " calories.");
 
             } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
                 IceCream x = (IceCream) m;
-                Candy y = (Candy) n;
+                IceCream y = (IceCream) n;
+                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                        + n.getName() + " that has " + y.getCal() + " calories.");
 
             } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
                 Sundae x = (Sundae) m;
-                Candy y = (Candy) n;
+                Sundae y = (Sundae) n;
+                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                        + n.getName() + " that has " + y.getCal() + " calories.");
             }
             i++;
-            //System.out.println(m.getName() + " with " + x.getCal());
 
         }
 
