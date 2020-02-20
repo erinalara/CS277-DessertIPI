@@ -30,7 +30,7 @@ public class Sundae extends IceCream {
      * @param c number of calories
      */
     public Sundae(String n, String s, double to, int c) {
-        super(n+ "(Sundae)");
+        super(n + " (Sundae)");
         t = s;
         top = to;
         cal = c;
@@ -83,6 +83,6 @@ public class Sundae extends IceCream {
      */
     @Override
     public String toString(){
-        return String.format("%-20s%n%-40s%5.2f" , (name+" with"), (t + " (Topping) "), getCost());
+        return String.format("%-20s%n%-40s%5.2f" , (name+"with"), (t + "(Topping) "), getCost());
     }
 }

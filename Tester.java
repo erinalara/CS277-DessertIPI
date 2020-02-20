@@ -32,6 +32,8 @@ public class Tester {
         System.out.println();
         System.out.println(cart.toString());
 
+        System.out.println();
+
         for (int i = 0; i < desserts.size()-1; i++) {
             DessertItem m = DessertItem.max(desserts.get(i), desserts.get(i+1));
             DessertItem n;
@@ -79,7 +81,6 @@ public class Tester {
                         + n.getName() + " that has " + yCal + " calories.");
             }
             i++;
-
         }
 
         for (int i = 0; i < desserts.size(); i++){
@@ -193,9 +194,6 @@ public class Tester {
 
                 System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
             }
-
         }
-
-
     }
 }

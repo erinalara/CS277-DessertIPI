@@ -27,7 +27,7 @@ public class IceCream extends DessertItem{
      * @param c calories of ice cream
      */
     public IceCream(String n, double p, int c){
-        super(n+ "(Ice Cream)");
+        super(n + " (Ice Cream)");
         price = p;
         cal = c;
     }
@@ -65,6 +65,6 @@ public class IceCream extends DessertItem{
      */
     @Override
     public String toString(){
-        return  String.format("%-40s%5.2f" , (name+" "), getCost());
+        return  String.format("%-40s%5.2f" , (name), getCost());
     }
 }

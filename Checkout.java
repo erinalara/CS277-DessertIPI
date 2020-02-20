@@ -80,6 +80,7 @@ public class Checkout extends java.lang.Object {
      */
     @Override
     public String toString() {
+        // String formatted as a receipt
         String receipt = "";
         receipt += "\t\t\t EE! Desserts Shop!" + '\n' + "\t\t  - - - - - - - - - - - -" + '\n';
         for (int i = 0; i < bag.size(); i++) {
@@ -87,6 +88,7 @@ public class Checkout extends java.lang.Object {
             receipt += tester;
             receipt += '\n';
         }
+
         receipt += '\n' + String.format("%4s%40.2f%n%-25s%20.2f", "Tax: ", totalTax()*.01, "Total cost: ", ((totalCost()+totalTax())*.01));
         return receipt;
     }

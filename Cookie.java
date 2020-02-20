@@ -36,7 +36,7 @@ public class Cookie extends DessertItem {
      */
     public Cookie(String n, int w, double r, int c){
 
-        super(n+ "(Cookie)");
+        super(n + " (Cookie)");
 
         amount = w;
 
@@ -122,7 +122,7 @@ public class Cookie extends DessertItem {
      */
     @Override
     public String toString(){
-        return amount + " @ " + rate + " /dz. \n" + String.format("%-40s%5.2f" , (name+" "), getCost());
+        return amount + " @ " + rate + " /dz. \n" + String.format("%-40s%5.2f" , (name), getCost());
     }
 
 }
