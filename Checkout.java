@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 public class Checkout {
 
     private ArrayList<DessertItem> bag;
@@ -21,19 +20,18 @@ public class Checkout {
         bag.clear();
     }
 
-    public double totalCost() {
-        double sum = 0;
+    public int totalCost() {
+        int sum = 0;
         for (int i = 0; i < bag.size(); i++) {
             DessertItem item = bag.get(i);
-            sum += Math.round(item.getCost() * 100.0) / 100.0 ;
-            sum = Math.round(sum*100.0) / 100.0;
+            sum += Math.round(item.getCost() * 100.0);
 
         }
         return sum;
     }
 
-    public double totalTax() { // implement
-        double tax = 6.06;
+    public int totalTax() { // implement
+        int tax = 606;
         return tax;
     }
 
@@ -47,7 +45,7 @@ public class Checkout {
             receipt += '\n';
         }
 
-        receipt += '\n' + String.format("%4s%40.2f%n%-25s%20.2f", "Tax: ", totalTax(), "Total cost: ", (totalCost()+totalTax()));
+        receipt += '\n' + String.format("%4s%40.2f%n%-25s%20.2f", "Tax: ", totalTax()*.01, "Total cost: ", ((totalCost()+totalTax())*.01));
         return receipt;
     }
 }
