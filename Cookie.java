@@ -18,10 +18,9 @@ public class Cookie extends DessertItem {
     private int cal;
 
     /** Constructs a cookie with given name
-     * @param n name of cookie
      */
-    public Cookie(String n){
-        super(n);
+    public Cookie(){
+        super();
         amount = 0;
         price = 0.0;
         rate = 0.0;
@@ -116,7 +115,6 @@ public class Cookie extends DessertItem {
         return 0;
     }
 
-
     /** Returns a string of the cookie's amount, cost per dozen rate, name, and total cost
      * @return cookie amount, cost rate per dozen, name, and total cost
      */
@@ -124,5 +122,4 @@ public class Cookie extends DessertItem {
     public String toString(){
         return amount + " @ " + rate + " /dz. \n" + String.format("%-40s%5.2f" , (name), getCost());
     }
-
 }

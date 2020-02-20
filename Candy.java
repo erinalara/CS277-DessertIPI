@@ -16,10 +16,13 @@ public class Candy extends DessertItem{
     private int cal;
 
     /** Constructs a candy with the given name
-     * @param n name of candy
      */
-    public Candy(String n) {
-        super(n);
+    public Candy() {
+        super();
+        weight = 0;
+        price = 0.0;
+        rate = 0.0;
+        cal = 0;
     }
 
     /** Constructs a candy with given name, weight, rate, and calories
@@ -29,13 +32,9 @@ public class Candy extends DessertItem{
      * @param c the number of calories in the candy
      */
     public Candy(String n, double w, double r, int c){
-
         super(n + " (Candy)");
-
         weight = w;
-
         rate = r;
-
         cal = c;
     }
 
@@ -44,14 +43,10 @@ public class Candy extends DessertItem{
      * @return true if name was successfully set, false if not
      */
     public boolean setName (String x){
-
         if (x != ""){
-
             name = x;
-
             return true;
         }
-
         return false;
     }
 
@@ -60,14 +55,10 @@ public class Candy extends DessertItem{
      * @return true if the candy's weight was successfully set, false if not
      */
     public boolean setWeight (double lbs) {
-
         if (lbs != 0.0){
-
             weight = lbs;
-
             return true;
         }
-
         return false;
     }
 
@@ -76,11 +67,8 @@ public class Candy extends DessertItem{
      * @return true if cost rate for candy was successfully set, false if not
      */
     public boolean setRate (double r){
-
         if (r != 0.0){
-
             rate = 0.0;
-
             return true;
         }
 
@@ -92,11 +80,8 @@ public class Candy extends DessertItem{
      * @return true if calories for candy was successfully set, false if not
      */
     public boolean setCal (int c){
-
         if (c != 0){
-
             cal = c;
-
             return true;
         }
 
@@ -117,7 +102,6 @@ public class Candy extends DessertItem{
     public double getCost () {
 
         price = (weight * rate);
-
         return price;
     }
 
@@ -125,7 +109,6 @@ public class Candy extends DessertItem{
      * @return candy's cost rate per pound
      */
     public double getRate(){
-
         return rate;
     }
 
@@ -133,7 +116,6 @@ public class Candy extends DessertItem{
      * @return number in calories in the candy
      */
     public int getCal(){
-
         return cal;
     }
 
@@ -144,9 +126,7 @@ public class Candy extends DessertItem{
     public int compareTo(Object o){
 
         if (o instanceof Candy){
-
             Candy f = (Candy) o;
-
             return this.getCal() - f.getCal();
         }
         return 0;

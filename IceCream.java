@@ -13,8 +13,13 @@ public class IceCream extends DessertItem{
     private int cal;
 
     /** Constructs an IceCream object with the given name
-     * @param n name of Ice cream
      */
+    public IceCream(){
+        super();
+        price = 0.0;
+        cal = 0;
+    }
+
     public IceCream(String n){
         super(n);
         price = 0.0;

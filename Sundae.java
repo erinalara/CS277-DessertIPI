@@ -17,10 +17,13 @@ public class Sundae extends IceCream {
     private String t;
 
     /** Constructs a Sundae child object with given name
-     * @param n name of Sundae
      */
-    public Sundae(String n) {
-        super(n);
+    public Sundae() {
+        super();
+        top = 0.0;
+        t = "";
+        cal = 0;
+        price = 0.0;
     }
 
     /** Constructs a Sundae child object with given name, topping price, and calories
@@ -30,7 +33,7 @@ public class Sundae extends IceCream {
      * @param c number of calories
      */
     public Sundae(String n, String s, double to, int c) {
-        super(n + " (Sundae)");
+        super(n + " (Sundae) ");
         t = s;
         top = to;
         cal = c;

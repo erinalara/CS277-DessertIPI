@@ -1,6 +1,7 @@
 /** @authors Eric Truong, Erina Lara
  * Date: February 18. 2020
- * Purpose:
+ * Purpose: Create a list of dessert items of Candy, Cookie, IceCream, and Sundae
+ * that extend its parent class, DessertItems. Program outputs a sample receipt, and tests each subclass.
  *
  */
 
@@ -47,13 +48,8 @@ public abstract class DessertItem implements Comparable {
         }
     }
 
-    /**
-     * Returns cost of DessertItem
-     *
+    /**Returns cost of DessertItem
      * @return cost of DessertItem
      */
     public abstract double getCost();
-
 }
-
-

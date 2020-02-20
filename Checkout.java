@@ -46,6 +46,7 @@ public class Checkout extends java.lang.Object {
      */
     public int totalCost() {
         int sum = 0;
+        // gets total cost
         for (int i = 0; i < bag.size(); i++) {
             DessertItem item = bag.get(i);
             sum += Math.round(item.getCost() * 100.0);
@@ -88,7 +89,6 @@ public class Checkout extends java.lang.Object {
             receipt += tester;
             receipt += '\n';
         }
-
         receipt += '\n' + String.format("%4s%40.2f%n%-25s%20.2f", "Tax: ", totalTax()*.01, "Total cost: ", ((totalCost()+totalTax())*.01));
         return receipt;
     }
