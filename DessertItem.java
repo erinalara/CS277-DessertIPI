@@ -1,3 +1,9 @@
+/** @authors Eric Truong, Erina Lara
+ * Date: February 18. 2020
+ * Purpose:
+ *
+ */
+
 import java.lang.Comparable;
 
 public abstract class DessertItem implements Comparable {
@@ -27,14 +33,14 @@ public abstract class DessertItem implements Comparable {
         return name;
     }
 
-    /*static DessertItem max (DessertItem a, DessertItem b) {
+    static DessertItem max (DessertItem a, DessertItem b) {
         if (b.compareTo(a) > a.compareTo(b)) {
             return b;
         }
         else {
             return a;
         }
-    }*/
+    }
 
     /**
      * Returns cost of DessertItem

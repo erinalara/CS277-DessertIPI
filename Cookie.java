@@ -4,15 +4,26 @@
  * The Cookie child object has an amount (number of cookies), total price, rate of cost per dozen,
  * and a number of calories.
  *
- *
  */
+<<<<<<< HEAD
 public class Cookie extends DessertItem{
+=======
 
+public class Cookie extends DessertItem {
+>>>>>>> da44f10d2c1947ba7f42508b9745fcd2b97f46c5
+
+    /** number of cookies */
     private int amount;
-    private double price; // price per dozen
+    /** total price for specified amount of cookies */
+    private double price;
+    /** cost of cookies per dozen */
     private double rate;
+    /** number of calories in cookie */
     private int cal;
 
+    /** Constructs a cookie with given name
+     * @param n name of cookie
+     */
     public Cookie(String n){
         super(n);
         amount = 0;
@@ -21,6 +32,12 @@ public class Cookie extends DessertItem{
         cal = 0;
     }
 
+    /** Constructs a cookie with given name, amount, rate, and calories
+     * @param n name of cookie
+     * @param w number of specified cookie
+     * @param r cost per dozen for the cookie
+     * @param c number of calories
+     */
     public Cookie(String n, int w, double r, int c){
 
         super(n);
@@ -32,6 +49,10 @@ public class Cookie extends DessertItem{
         cal = c;
     }
 
+    /** Sets number of cookies
+     * @param a specified amount of cookies
+     * @return true if amount of cookies was successfully set, false if not
+     */
     public boolean setAmount (int a) {
         if (a != 0){
             amount = a;
@@ -40,22 +61,42 @@ public class Cookie extends DessertItem{
         return false;
     }
 
+    /** Gets amount of cookies
+     * @return number of specified cookies
+     */
     public double getAmount () {
         return amount;
     }
 
-    public void setCal(int c) {
-        cal = c;
+    /** Sets number of calories for cookie
+     * @param c number of calories for cookie
+     * @return true if number of calories was successfully set, false if not
+     */
+    public boolean setCal(int c) {
+        if (c != 0){
+            cal = c;
+            return true;
+        }
+        return false;
     }
 
+    /** Gets number of calories of cookie
+     * @return cookie's number of calories
+     */
     public int getCal() {
         return cal;
     }
 
+    /** Gets cost per dozen for cookie
+     * @return cost per dozen for cookie
+     */
     public double getRate(){
         return rate;
     }
 
+    /** Gets total cost of cookies based of amount and rate
+     * @return total cost of cookies
+     */
     public double getCost(){
 
         price = (amount * rate / 12.0);
@@ -63,6 +104,7 @@ public class Cookie extends DessertItem{
         return price;
     }
 
+<<<<<<< HEAD
     public int compareTo(Object o){
 
         if (o instanceof Cookie){
@@ -96,6 +138,11 @@ public class Cookie extends DessertItem{
         return this;
     }
 
+=======
+    /** Returns a string of the cookie's amount, cost per dozen rate, name, and total cost
+     * @return cookie amount, cost rate per dozen, name, and total cost
+     */
+>>>>>>> da44f10d2c1947ba7f42508b9745fcd2b97f46c5
     @Override
     public String toString(){
 
