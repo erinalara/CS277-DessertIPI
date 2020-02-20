@@ -33,6 +33,11 @@ public abstract class DessertItem implements Comparable {
         return name;
     }
 
+    /** Finds the larger object of the two desserts, based on calories
+     * @param a dessert item to be compared
+     * @param b second dessert item to be compared
+     * @return larger dessert item with more calories
+     */
     public static DessertItem max(DessertItem a, DessertItem b) {
         if (b.compareTo(a) > a.compareTo(b)) {
             return b;

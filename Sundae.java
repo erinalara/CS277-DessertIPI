@@ -67,6 +67,10 @@ public class Sundae extends IceCream {
         return cal;
     }
 
+    /** Compares the calories of two sundaes
+     * @param o Sundae  to be compared with
+     * @return the difference of the two sundae's calories
+     */
     public int compareTo(Object o){
 
         if (o instanceof Sundae){

@@ -100,6 +100,10 @@ public class Cookie extends DessertItem {
         return price;
     }
 
+    /** Compares the calories of two cookies
+     * @param o Cookie to be compared with
+     * @return the difference of the two cookies' calories
+     */
     public int compareTo(Object o){
 
         if (o instanceof Cookie){

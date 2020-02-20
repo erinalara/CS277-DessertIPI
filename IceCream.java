@@ -44,6 +44,10 @@ public class IceCream extends DessertItem{
         return price;
     }
 
+    /** Compares the calories of two ice creams
+     * @param o Ice cream to be compared with
+     * @return the difference of the two ice creams' calories
+     */
     public int compareTo(Object o){
 
         if (o instanceof IceCream){

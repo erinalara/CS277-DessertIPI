@@ -138,6 +138,10 @@ public class Candy extends DessertItem{
         return cal;
     }
 
+    /** Compares the calories of two candies
+     * @param o Candy to be compared with
+     * @return the difference of the two candies' calories
+     */
     public int compareTo(Object o){
 
         if (o instanceof Candy){
