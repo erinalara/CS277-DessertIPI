@@ -1,9 +1,5 @@
 
-import java.text.DecimalFormat;
-
 public class Candy extends DessertItem {
-
-    DecimalFormat df = new DecimalFormat("0.00");
 
     private double weight;
     private double price;

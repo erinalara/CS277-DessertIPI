@@ -1,7 +1,4 @@
-import java.text.DecimalFormat;
-
 public class Cookie extends DessertItem {
-    DecimalFormat df = new DecimalFormat("0.00");
 
     private int amount;
     private double price; // price per dozen

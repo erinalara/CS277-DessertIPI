@@ -1,9 +1,7 @@
 import java.util.ArrayList;
-import java.text.DecimalFormat;
 
 
 public class Checkout {
-    DecimalFormat df = new DecimalFormat("0.00");
 
     private ArrayList<DessertItem> bag;
 

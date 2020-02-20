@@ -1,7 +1,5 @@
-import java.text.DecimalFormat;
 
 public class Sundae extends IceCream {
-    DecimalFormat df = new DecimalFormat("0.00");
 
     private double price; // cost of ice cream + topping
     private double top;

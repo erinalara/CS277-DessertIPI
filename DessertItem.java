@@ -1,6 +1,6 @@
 import java.lang.Comparable;
 
-public abstract class DessertItem  {
+public abstract class DessertItem /*implements Comparable*/ {
 
     protected String name;
 
@@ -27,14 +27,7 @@ public abstract class DessertItem  {
         return name;
     }
 
-    /**
-     * Returns cost of DessertItem
-     *
-     * @return cost of DessertItem
-     */
-    public abstract double getCost();
-
-    /*public static DessertItem max (DessertItem a, DessertItem b) {
+    /*static DessertItem max (DessertItem a, DessertItem b) {
         if (b.compareTo(a) > a.compareTo(b)) {
             return b;
         }
@@ -42,4 +35,11 @@ public abstract class DessertItem  {
             return a;
         }
     }*/
+
+    /**
+     * Returns cost of DessertItem
+     *
+     * @return cost of DessertItem
+     */
+    public abstract double getCost();
 }

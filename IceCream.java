@@ -1,7 +1,4 @@
-import java.text.DecimalFormat;
-
 public class IceCream extends DessertItem{
-    DecimalFormat df = new DecimalFormat("0.00");
 
     private double price;
     private int cal;
