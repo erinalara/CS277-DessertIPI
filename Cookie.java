@@ -1,3 +1,11 @@
+/** @authors Eric Truong, Erina Lara
+ * Date: February 17, 2020
+ * Description: Subclass creates a Cookie child Object that extends the DessertItem superclass.
+ * The Cookie child object has an amount (number of cookies), total price, rate of cost per dozen,
+ * and a number of calories.
+ *
+ *
+ */
 public class Cookie extends DessertItem {
 
     private int amount;
