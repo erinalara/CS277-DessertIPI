@@ -5,12 +5,8 @@
  * and a number of calories.
  *
  */
-<<<<<<< HEAD
-public class Cookie extends DessertItem{
-=======
 
 public class Cookie extends DessertItem {
->>>>>>> da44f10d2c1947ba7f42508b9745fcd2b97f46c5
 
     /** number of cookies */
     private int amount;
@@ -104,7 +100,6 @@ public class Cookie extends DessertItem {
         return price;
     }
 
-<<<<<<< HEAD
     public int compareTo(Object o){
 
         if (o instanceof Cookie){
@@ -138,11 +133,9 @@ public class Cookie extends DessertItem {
         return this;
     }
 
-=======
     /** Returns a string of the cookie's amount, cost per dozen rate, name, and total cost
      * @return cookie amount, cost rate per dozen, name, and total cost
      */
->>>>>>> da44f10d2c1947ba7f42508b9745fcd2b97f46c5
     @Override
     public String toString(){
 

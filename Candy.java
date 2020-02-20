@@ -180,10 +180,4 @@ public class Candy extends DessertItem{
         return weight + " @ " + rate + " / lb \n" + String.format("%-40s%5.2f" , (name+" (Candy)"), getCost());
     }
 
-    public Candy max(Candy a) {
-        if (a instanceof Object) {
-            Candy a2 = (Candy) a;
-        }
-        return this.cal.
-    }
 }

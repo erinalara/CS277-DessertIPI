@@ -32,22 +32,18 @@ public class IceCream extends DessertItem{
         cal = c;
     }
 
-<<<<<<< HEAD
     public int getCal(){
 
         return cal;
     }
 
-=======
     /** Gets cost of ice cream
      * @return ice cream's cost
      */
->>>>>>> da44f10d2c1947ba7f42508b9745fcd2b97f46c5
     public double getCost(){
         return price;
     }
 
-<<<<<<< HEAD
     public int compareTo(Object o){
 
         if (o instanceof IceCream){
@@ -77,11 +73,9 @@ public class IceCream extends DessertItem{
 
         return this;
     }
-=======
     /** Returns a string of the ice cream's name and cost
      * @return ice cream's name and cost
      */
->>>>>>> da44f10d2c1947ba7f42508b9745fcd2b97f46c5
     @Override
     public String toString(){
         return  String.format("%-40s%5.2f" , (name+" (Ice Cream)"), getCost());
