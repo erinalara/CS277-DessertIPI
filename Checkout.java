@@ -49,7 +49,7 @@ public class Checkout {
             receipt += '\n';
         }
 
-        receipt += "Tax:       " + totalTax() + '\n' + "Total cost:        " + (totalCost() + totalTax());
+        receipt += String.format("%4s%40.2f%n%-25s%20.2f", "Tax: ", totalTax(), "Total cost: ", totalCost());
         return receipt;
     }
 }

@@ -61,7 +61,7 @@ public class Cookie extends DessertItem {
     @Override
     public String toString(){
 
-        return amount + " @ " + rate + " /dz \n" + name + "(Cookie) \t\t\t\t\t\t" + df.format(getCost());
+        return amount + " @ " + rate + " / lb \n" + String.format("%-40s%5.2f" , (name+" (Cookie)"), getCost());
     }
 
 

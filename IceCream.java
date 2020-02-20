@@ -25,6 +25,6 @@ public class IceCream extends DessertItem{
     @Override
     public String toString(){
 
-        return name + "(Ice Cream) \t\t\t\t\t\t\t" + df.format(getCost());
+        return  String.format("%-40s%5.2f" , (name+" (Ice Cream)"), getCost());
     }
 }
