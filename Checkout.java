@@ -54,11 +54,11 @@ public class Checkout extends java.lang.Object {
         return sum;
     }
 
-    /** Gives total tax of all items, exclusing prices
+    /** Gives total tax of all items, excluding prices
      * @return total tax of all items
      */
     public int totalTax() { // implement
-        int tax = 606;
+        int tax = (int) (tRate * bag.size());
         return tax;
     }
 

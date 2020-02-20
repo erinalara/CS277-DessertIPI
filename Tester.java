@@ -24,6 +24,7 @@ public class Tester {
         cart.enterItem(new IceCream("Chocolate", 9.99, 500));
         cart.enterItem(new Sundae("Caramel", "HotFudge", 7.70, 600));
         cart.enterItem(new Sundae("Banana Split", "Strawberries",6.90, 560));
+        cart.setTaxRate(75.75);
 
         // CANDY TEST
         System.out.println("CANDY TEST:");
