@@ -6,7 +6,7 @@
  *
  *
  */
-public class Cookie extends DessertItem {
+public class Cookie extends DessertItem{
 
     private int amount;
     private double price; // price per dozen
@@ -61,6 +61,39 @@ public class Cookie extends DessertItem {
         price = (amount * rate / 12.0);
 
         return price;
+    }
+
+    public int compareTo(Object o){
+
+        if (o instanceof Cookie){
+
+            Cookie f = (Cookie) o;
+
+            return this.getCal() - f.getCal();
+        }
+
+        return 0;
+    }
+
+    public Cookie getMax(Object o){
+
+        if (o instanceof Cookie){
+
+            Cookie f = (Cookie) o;
+
+            if (this.compareTo(f) > 0){
+
+                return this;
+            }
+
+            else {
+
+                return f;
+            }
+
+        }
+
+        return this;
     }
 
     @Override

@@ -23,5 +23,9 @@ public class Tester {
         System.out.println();
         System.out.println(cart.toString());
 
+        DessertItem max = (desserts.get(0).getMax(desserts.get(1)));
+
+        System.out.println(max);
+
     }
 }

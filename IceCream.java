@@ -15,10 +15,44 @@ public class IceCream extends DessertItem{
         cal = c;
     }
 
+    public int getCal(){
+
+        return cal;
+    }
+
     public double getCost(){
         return price;
     }
 
+    public int compareTo(Object o){
+
+        if (o instanceof IceCream){
+
+            IceCream f = (IceCream) o;
+
+            return this.getCal() - f.getCal();
+        }
+
+        return 0;
+    }
+
+    public IceCream getMax(Object o){
+
+        if (o instanceof IceCream){
+
+            IceCream f = (IceCream) o;
+
+            if (this.compareTo(f) > 0){
+
+                return this;
+            }
+            else{
+                return f;
+            }
+        }
+
+        return this;
+    }
     @Override
     public String toString(){
 

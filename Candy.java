@@ -4,7 +4,7 @@
  * The Candy child has a weight, price, rate, and number of calories.
  *
  */
-public class Candy extends DessertItem {
+public class Candy extends DessertItem{
 
     /** how much the candy weighs */
     private double weight;
@@ -93,7 +93,7 @@ public class Candy extends DessertItem {
      */
     public boolean setCal (int c){
 
-        if (c != 0.0){
+        if (c != 0){
 
             cal = c;
 
@@ -132,10 +132,45 @@ public class Candy extends DessertItem {
     /** Gets number of calories from candy
      * @return number in calories in the candy
      */
-    public double getCal(){
+    public int getCal(){
+
 
         return cal;
     }
+
+    public int compareTo(Object o){
+
+        if (o instanceof Candy){
+
+            Candy f = (Candy) o;
+
+            return this.getCal() - f.getCal();
+        }
+
+        return 0;
+    }
+
+    public Candy getMax(Object o){
+
+        if (o instanceof Candy){
+
+            Candy f = (Candy) o;
+
+            if (this.compareTo(f) > 0){
+
+                return this;
+            }
+
+            else {
+
+                return f;
+            }
+
+        }
+
+        return this;
+    }
+
 
     /** Returns a string of the candy's weight, rate, name, and cost
      * @return string of candy's weight, rate, name, and cost
