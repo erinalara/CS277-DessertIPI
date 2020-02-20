@@ -32,22 +32,37 @@ public class Tester {
         System.out.println();
         System.out.println(cart.toString());
 
-        DessertItem m = DessertItem.max(desserts.get(0),desserts.get(1));
-        if (m instanceof Candy) {
-            Candy x = (Candy) m;
-            System.out.println(m.getName() + " has " + x.getCal());
-        }
-        else if (m instanceof Cookie) {
-            Cookie x = (Cookie) m;
-            System.out.println(m.getName() + " has " + x.getCal());
-        }
-        else if (m instanceof IceCream) {
-            IceCream x = (IceCream) m;
-            System.out.println(m.getName() + " has " + x.getCal());
-        }
-        else if (m instanceof Sundae) {
-            Sundae x = (Sundae) m;
-            System.out.println(m.getName() + " has " + x.getCal());
+        for (int i = 0; i < desserts.size()-1; i++) {
+            DessertItem m = DessertItem.max(desserts.get(i), desserts.get(i+1));
+            DessertItem n;
+            if (m == desserts.get(i)) {
+                n = desserts.get(i+1);
+            }
+            else {
+                n = desserts.get(i);
+            }
+
+            if ((m instanceof Candy) || (n instanceof Candy)) {
+                Candy x = (Candy) m;
+                Candy y = (Candy) n;
+                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                    + n.getName() + " that has " + y.getCal() + " calories.");
+
+            } else if ((m instanceof Cookie) || (n instanceof Cookie)) {
+                Cookie x = (Cookie) m;
+                Candy y = (Candy) n;
+
+            } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
+                IceCream x = (IceCream) m;
+                Candy y = (Candy) n;
+
+            } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
+                Sundae x = (Sundae) m;
+                Candy y = (Candy) n;
+            }
+            i++;
+            //System.out.println(m.getName() + " with " + x.getCal());
+
         }
 
 
