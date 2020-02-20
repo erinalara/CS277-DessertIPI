@@ -45,25 +45,25 @@ public class Tester {
             if ((m instanceof Candy) || (n instanceof Candy)) {
                 Candy x = (Candy) m;
                 Candy y = (Candy) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
                     + n.getName() + " that has " + y.getCal() + " calories.");
 
             } else if ((m instanceof Cookie) || (n instanceof Cookie)) {
                 Cookie x = (Cookie) m;
                 Cookie y = (Cookie) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
                         + n.getName() + " that has " + y.getCal() + " calories.");
 
             } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
                 IceCream x = (IceCream) m;
                 IceCream y = (IceCream) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
                         + n.getName() + " that has " + y.getCal() + " calories.");
 
             } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
                 Sundae x = (Sundae) m;
                 Sundae y = (Sundae) n;
-                System.out.println(m.getName() + " with " + x.getCal() + " has bigger calories than "
+                System.out.println(m.getName() + " with " + x.getCal() + " has more calories than "
                         + n.getName() + " that has " + y.getCal() + " calories.");
             }
             i++;
