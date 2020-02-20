@@ -32,6 +32,8 @@ public class Tester {
         System.out.println();
         System.out.println(cart.toString());
 
+        System.out.println();
+
         for (int i = 0; i < desserts.size()-1; i++) {
             DessertItem m = DessertItem.max(desserts.get(i), desserts.get(i+1));
             DessertItem n;
@@ -71,7 +73,7 @@ public class Tester {
                 yCal = y.getCal();
             }
             if (xCal == yCal) {
-                System.out.println(m.getName() + " with " +xCal + " calories is equal to "
+                System.out.println(m.getName() + "with " +xCal + " calories is equal to "
                         + n.getName() + " that has " +yCal + " calories.");
             }
             else {
