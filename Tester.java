@@ -32,9 +32,16 @@ public class Tester {
         System.out.println();
         System.out.println(cart.toString());
 
+
         //DessertItem max = (desserts.get(0).max(desserts.get(1)));
         DessertItem m = DessertItem.max(desserts.get(0),desserts.get(1));
-        System.out.println(m.getName() + "has");
+        if (m instanceof Candy) {
+            Candy x = (Candy) m;
+            System.out.println(m.getName() + " has " + x.getCal());
+
+        }
+
+        //System.out.println(m.getName() + " has" + desserts.get(0).get);
 
     }
 }
