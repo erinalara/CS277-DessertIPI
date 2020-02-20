@@ -42,14 +42,14 @@ public class Checkout {
     @Override
     public String toString() {
         String receipt = "";
-        receipt += "    EE! Desserts Shop!" + '\n' + "    - - - - - - - - - -    " + '\n';
+        receipt += "\t\t\t EE! Desserts Shop!" + '\n' + "\t\t  - - - - - - - - - - - -" + '\n';
         for (int i = 0; i < bag.size(); i++) {
             DessertItem tester = bag.get(i);
             receipt += tester;
             receipt += '\n';
         }
 
-        receipt += String.format("%4s%40.2f%n%-25s%20.2f", "Tax: ", totalTax(), "Total cost: ", totalCost());
+        receipt += '\n' + String.format("%4s%40.2f%n%-25s%20.2f", "Tax: ", totalTax(), "Total cost: ", (totalCost()+totalTax()));
         return receipt;
     }
 }
