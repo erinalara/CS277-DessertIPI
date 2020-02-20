@@ -82,5 +82,117 @@ public class Tester {
             i++;
         }
 
+        for (int i = 0; i < desserts.size(); i++){
+
+            int checkHighest = 0;
+            int checkLowest = 0;
+
+            int lowest = i;
+
+            DessertItem nLowest = desserts.get(i);
+
+            for (int j = i + 1; j < desserts.size(); j++){
+
+                DessertItem checking = desserts.get(j);
+
+                if (nLowest instanceof Candy){
+
+                    Candy a = (Candy) nLowest;
+
+                    checkLowest = a.getCal();
+                }
+
+                else if (nLowest instanceof Cookie){
+
+                    Cookie a = (Cookie) nLowest;
+
+                    checkLowest = a.getCal();
+                }
+
+                else if (nLowest instanceof IceCream){
+
+                    IceCream a = (IceCream) nLowest;
+
+                    checkLowest = a.getCal();
+                }
+
+                else if (nLowest instanceof Sundae){
+
+                    Sundae a = (Sundae) nLowest;
+
+                    checkLowest = a.getCal();
+                }
+
+                if (checking instanceof Candy){
+
+                    Candy a = (Candy) checking;
+
+                    checkHighest = a.getCal();
+                }
+
+                else if (checking instanceof Cookie){
+
+                    Cookie a = (Cookie) checking;
+
+                    checkHighest = a.getCal();
+                }
+
+                else if (checking instanceof IceCream){
+
+                    IceCream a = (IceCream) checking;
+
+                    checkHighest = a.getCal();
+                }
+
+                else if (checking instanceof Sundae){
+
+                    Sundae a = (Sundae) checking;
+
+                    checkHighest = a.getCal();
+                }
+
+                if ((checkHighest - checkLowest) < 0){
+
+                    lowest = j;
+                }
+            }
+
+            DessertItem swap = desserts.get(lowest);
+            desserts.set(i, desserts.get(lowest));
+            desserts.set(lowest, swap);
+        }
+
+        for (int i = 0; i < desserts.size(); i++){
+
+            DessertItem select = desserts.get(i);
+
+            if (select instanceof Candy){
+
+                Candy toPrint = (Candy) select;
+
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+
+            else if (select instanceof Cookie){
+
+                Cookie toPrint = (Cookie) select;
+
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+
+            else if (select instanceof IceCream){
+
+                IceCream toPrint = (IceCream) select;
+
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+
+            else if (select instanceof Sundae){
+
+                Sundae toPrint = (Sundae) select;
+
+                System.out.println(toPrint.getName() + " has " + toPrint.getCal() + " calories");
+            }
+        }
     }
 }
