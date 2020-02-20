@@ -13,8 +13,8 @@ public class Tester {
         desserts.add(new Cookie("Oatmeal", 15, 3.99, 240));
         desserts.add(new IceCream("Vanilla", 10.05, 500));
         desserts.add(new IceCream("Chocolate", 9.99, 500));
-        desserts.add(new Sundae("Caramel", 7.70, 600));
-        desserts.add(new Sundae("Strawberry", 6.90, 560));
+        desserts.add(new Sundae("Caramel", "HotFudge", 7.70, 600));
+        desserts.add(new Sundae("Banana Split", "Strawberries", 6.90, 560));
 
         cart.enterItem(new Candy("Corn", 1.5, 7.25, 500));
         cart.enterItem(new Candy("Lollipop", 2.5, 8.25, 640 ));
@@ -22,8 +22,8 @@ public class Tester {
         cart.enterItem(new Cookie("Oatmeal", 15, 3.99, 240));
         cart.enterItem(new IceCream("Vanilla", 10.05, 500));
         cart.enterItem(new IceCream("Chocolate", 9.99, 500));
-        cart.enterItem(new Sundae("Caramel", 7.70, 600));
-        cart.enterItem(new Sundae("Strawberry", 6.90, 560));
+        cart.enterItem(new Sundae("Caramel", "HotFudge", 7.70, 600));
+        cart.enterItem(new Sundae("Banana Split", "Strawberries",6.90, 560));
 
         System.out.println("Number of items: " + cart.numberofItems());
         System.out.println("Total cost: " + cart.totalCost());

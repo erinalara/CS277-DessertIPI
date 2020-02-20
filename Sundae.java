@@ -13,6 +13,8 @@ public class Sundae extends IceCream {
     private double top;
     /** number of calories in ice cream*/
     private int cal;
+    /** topping for ice cream */
+    private String t;
 
     /** Constructs a Sundae child object with given name
      * @param n name of Sundae
@@ -23,12 +25,14 @@ public class Sundae extends IceCream {
 
     /** Constructs a Sundae child object with given name, topping price, and calories
      * @param n name of ice cream
-     * @param t price of topping
+     * @param s name of topping
+     * @param to price of topping
      * @param c number of calories
      */
-    public Sundae(String n, double t, int c) {
+    public Sundae(String n, String s, double to, int c) {
         super(n);
-        top = t;
+        t = s;
+        top = to;
         cal = c;
     }
 
@@ -37,15 +41,6 @@ public class Sundae extends IceCream {
      */
     public double getCost(){
         return super.getCost() + top;
-    }
-
-    /** Returns a string of Sundae's name and total cost
-     * @return Sundae's name and total cost
-     */
-    @Override
-    public String toString(){
-
-        return  String.format("%-40s%5.2f" , (name+" (Sundae)"), getCost());
     }
 
     /** Sets number of calories for cookie
@@ -83,4 +78,11 @@ public class Sundae extends IceCream {
         return 0;
     }
 
+    /** Returns a string of Sundae's name and total cost
+     * @return Sundae's name and total cost
+     */
+    @Override
+    public String toString(){
+        return String.format("%-20s%n%-40s%5.2f" , (name+" (Sundae) with"), (t + " (Topping) "), getCost());
+    }
 }

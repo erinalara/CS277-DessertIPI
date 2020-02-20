@@ -122,7 +122,7 @@ public class Cookie extends DessertItem {
      */
     @Override
     public String toString(){
-        return amount + " @ " + rate + " / lb \n" + String.format("%-40s%5.2f" , (name+" (Cookie)"), getCost());
+        return amount + " @ " + rate + " /dz. \n" + String.format("%-40s%5.2f" , (name+" (Cookie)"), getCost());
     }
 
 }
