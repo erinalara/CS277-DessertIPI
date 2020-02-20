@@ -65,7 +65,6 @@ public class Tester {
                 xCal = x.getCal();
                 yCal = y.getCal();
 
-
             } else if ((m instanceof IceCream) || (n instanceof IceCream)) {
                 Sundae x = (Sundae) m;
                 Sundae y = (Sundae) n;
