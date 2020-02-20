@@ -73,7 +73,7 @@ public class Tester {
                 yCal = y.getCal();
             }
             if (xCal == yCal) {
-                System.out.println(m.getName() + "with " +xCal + " calories is equal to "
+                System.out.println(m.getName() + " with " +xCal + " calories is equal to "
                         + n.getName() + " that has " +yCal + " calories.");
             }
             else {
@@ -81,9 +81,7 @@ public class Tester {
                         + n.getName() + " that has " + yCal + " calories.");
             }
             i++;
-
         }
-
 
     }
 }
