@@ -157,7 +157,7 @@ public class Tester {
                 }
             }
 
-            DessertItem swap = desserts.get(lowest);
+            DessertItem swap = desserts.get(i);
             desserts.set(i, desserts.get(lowest));
             desserts.set(lowest, swap);
         }
