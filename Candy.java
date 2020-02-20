@@ -1,4 +1,7 @@
-
+/** @authors Eric Truong, Erina Lara
+ *
+ *
+ */
 public class Candy extends DessertItem {
 
     private double weight;

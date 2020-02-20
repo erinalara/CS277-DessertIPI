@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Checkout {
+public class Checkout extends java.lang.Object {
 
     private ArrayList<DessertItem> bag;
     private double tRate;
