@@ -30,7 +30,7 @@ public class Candy extends DessertItem{
      */
     public Candy(String n, double w, double r, int c){
 
-        super(n);
+        super(n+ "(Candy)");
 
         weight = w;
 
@@ -159,7 +159,7 @@ public class Candy extends DessertItem{
      */
     @Override
     public String toString(){
-        return weight + " @ " + rate + " /lb. \n" + String.format("%-40s%5.2f" , (name+" (Candy)"), getCost());
+        return weight + " @ " + rate + " /lb. \n" + String.format("%-40s%5.2f" , (name+" "), getCost());
     }
 
 }
